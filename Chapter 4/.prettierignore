@@ -1,0 +1,13 @@
+# Ignore static file
+static/src/output.css
+
+# Ignore all log files
+*.log
+
+# Ignore all database files
+db.sqlite3
+
+# Ignore all compiled Python files
+*.pyc
+*.pyo
+__pycache__/
