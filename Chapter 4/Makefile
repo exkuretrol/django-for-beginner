@@ -9,3 +9,7 @@ test:
 
 tailwind:
 	@npm run tailwind-watch
+
+migrate:
+	@python manage.py makemigrations
+	@python manage.py migrate
