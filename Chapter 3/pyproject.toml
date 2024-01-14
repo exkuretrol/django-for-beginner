@@ -7,6 +7,8 @@ authors = ["exkuretrol <33695301+exkuretrol@users.noreply.github.com>"]
 [tool.poetry.dependencies]
 python = "^3.12"
 Django = "^5.0.1"
+django-browser-reload = "^1.12.1"
+gunicorn = "^21.2.0"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.12.1"

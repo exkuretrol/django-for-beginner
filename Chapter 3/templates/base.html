@@ -1,8 +1,18 @@
-<header>
-    <a href="{% url "about" %}">about</a>
-    <a href="{% url "home" %}">home</a>
-</header>
+{% load static %}
 
-{% block content %}
-
-{% endblock content %}
+<!doctype html>
+<html lang="zh-tw">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>tailwindcss</title>
+        <link rel="stylesheet" href="{% static "src/output.css" %}" />
+    </head>
+    <body>
+        <header>
+            <a href="{% url 'about' %}">about</a>
+            <a href="{% url 'home' %}">home</a>
+        </header>
+        {% block content %} {% endblock %}
+    </body>
+</html>
