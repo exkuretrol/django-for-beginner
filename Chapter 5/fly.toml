@@ -1,13 +1,16 @@
-# fly.toml app configuration file generated for django-for-beginner-pages on 2024-01-15T00:51:15+08:00
+# fly.toml app configuration file generated for django-for-beginner-pages on 2024-01-15T02:35:31+08:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
 app = "django-for-beginner-pages"
-primary_region = "hkg"
+primary_region = "nrt"
 console_command = "/code/manage.py shell"
 
 [build]
+
+[deploy]
+  release_command = "python manage.py migrate --noinput"
 
 [env]
   PORT = "8000"

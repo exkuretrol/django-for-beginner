@@ -1,5 +1,6 @@
 # Ignore static file
 static/src/output.css
+staticfiles
 
 # Ignore all log files
 *.log
