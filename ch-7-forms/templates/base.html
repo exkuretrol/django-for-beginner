@@ -9,8 +9,12 @@
         <link rel="stylesheet" href="{% static 'src/output.css' %}" />
     </head>
     <body class="max-w-3xl mx-auto bg-slate-200">
-        <header class="flex flex-row">
-            <a href="{% url 'home' %}" class="px-4 py-2 bg-slate-50">home</a>
+        <header class="flex flex-row gap-4 mt-2">
+            <a href="{% url 'home' %}" class="px-4 py-2 bg-slate-50">Django Blog</a>
+            <a href="{% url 'post_new' %}" class="ml-auto px-4 py-2 bg-slate-50">+ New Post +</a>
+            {% block nav %}
+
+            {% endblock nav %}
         </header>
         {% block content %}
         {% endblock %}
