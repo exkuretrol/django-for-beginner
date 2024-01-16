@@ -30,8 +30,9 @@ SECRET_KEY = env.str("SECURITY_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool("DEBUG", default=False)
 
-APP_NAME = env.str("FLY_APP_NAME")
-ALLOWED_HOSTS = [f"{APP_NAME}.fly.dev", "localhost", "127.0.0.1"]
+import os
+APP_NAME = os.environ.get("FLY_APP_NAME", "*")
+ALLOWED_HOSTS = [f"{APP_NAME}.fly.dev", "localhost"]
 CSRF_TRUSTED_ORIGINS = ["https://*.fly.dev"]
 
 
