@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% block content %}
+<h1 class="px-2 py-4 text-5xl text-slate-500 mb-4">blog home page</h1>
+{% for post in post_list %}
+<article class="bg-slate-50 mb-4 p-6">
+    <h2 class="text-4xl font-serif mb-2">
+        <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+    </h2>
+    <p>{{ post.body }}</p>
+</article>
+{% endfor %} {% endblock %}
