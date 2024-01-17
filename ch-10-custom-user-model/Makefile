@@ -1,5 +1,12 @@
 .PHONY: run
 
+init:
+	@poetry install
+	@npm install
+	@django-admin startproject django_project .
+	@mkdir -p static/src
+	@echo "@tailwind base;\n@tailwind components;\n@tailwind utilities;" > static/src/input.css
+
 run:
 	@npm run tailwind	
 	@python manage.py runserver
