@@ -45,10 +45,14 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
+    # 3rd party, static files serve
     "whitenoise.runserver_nostatic",
     "django.contrib.staticfiles",
-    "accounts",
+    # 3rd party
     "widget_tweaks",
+    # local
+    "accounts",
+    "articles",
 ]
 
 MIDDLEWARE = [
@@ -119,7 +123,7 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "Asia/Taipei"
 
 USE_I18N = True
 
