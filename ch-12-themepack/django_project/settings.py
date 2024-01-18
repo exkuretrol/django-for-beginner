@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "accounts",
     "widget_tweaks",
+    "crispy_forms",
+    "crispy_tailwind",
 ]
 
 MIDDLEWARE = [
@@ -141,6 +143,9 @@ STORAGES = {
         else "whitenoise.storage.CompressedStaticFilesStorage",
     },
 }
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "tailwind"
+CRISPY_TEMPLATE_PACK = "tailwind"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
