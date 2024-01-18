@@ -1,0 +1,20 @@
+{% extends "_base.html" %}
+{% block content %}
+    <div class="bg-slate-50 p-4 mb-4">
+        <h2 class="text-4xl font-serif mb-4">{{ article.title }}</h2>
+        <div class="text-sm text-slate-300 flex flex-row gap-2">
+            <span class="ml-auto px-2 py-1 bg-slate-500">
+            {{ article.date }}
+            </span>
+            <span class="px-2 py-1 bg-slate-500">
+            Author {{ article.author.username }}
+            </span>
+        </div>
+        <article class="font-mono mb-4">{{ article.body }}</article>
+        <div class="flex flex-row gap-2">
+
+        <a href="{% url 'article_update' article.pk %}" class="bg-slate-500 hover:bg-slate-700 text-white font-bold py-2 px-4 h-10 w-fit block">Edit</a>
+        <a href="{% url 'article_delete' article.pk %}" class="bg-rose-500 hover:bg-rose-700 text-white font-bold py-2 px-4 h-10 w-fit block">Delete</a>
+        </div>
+    </div>
+{% endblock content %}
