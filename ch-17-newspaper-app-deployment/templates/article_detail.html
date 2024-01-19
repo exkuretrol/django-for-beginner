@@ -28,8 +28,8 @@
             <div>{{ comment.comment }}</div>
         </div>
     {% endfor %}
-    <div class="bg-slate-50 p-4 mb-4">
-        {% if user.is_authenticated and article.author.pk != request.user.pk %}
+    {% if user.is_authenticated and article.author.pk != request.user.pk %}
+        <div class="bg-slate-50 p-4 mb-4">
             <form action="" method="post">
                 {% csrf_token %}
                 <label for="id_comment"
@@ -39,6 +39,6 @@
                        value="Comment"
                        class="bg-slate-500 hover:bg-slate-700 text-white font-bold py-2 px-4 h-10 w-fit block" />
             </form>
-        {% endif %}
-    </div>
+        </div>
+    {% endif %}
 {% endblock content %}
