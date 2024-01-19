@@ -6,7 +6,7 @@ authors = ["exkuretrol <33695301+exkuretrol@users.noreply.github.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "^3.11"
 Django = "^5.0.1"
 gunicorn = "^21.2.0"
 environs = {extras = ["django"], version = "^10.3.0"}

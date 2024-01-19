@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for ch-17-newpaper-app-deployment on 2024-01-19T13:30:13+08:00
+# fly.toml app configuration file generated for ch-17-newspaper-app-deployment on 2024-01-19T13:36:11+08:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "ch-17-newpaper-app-deployment"
+app = "ch-17-newspaper-app-deployment"
 primary_region = "nrt"
 console_command = "/code/manage.py shell"
 

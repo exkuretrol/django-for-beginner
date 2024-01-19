@@ -1,4 +1,4 @@
-ARG PYTHON_VERSION=3.12-slim-bullseye
+ARG PYTHON_VERSION=3.11-slim-bullseye
 
 FROM python:${PYTHON_VERSION}
 
@@ -21,7 +21,7 @@ RUN poetry config virtualenvs.create false
 RUN poetry install --only main --no-root --no-interaction
 COPY . /code
 
-ENV SECRET_KEY "MzVQYlJzujZ41d91fwJvoBuiiyqCs77Y0tmNzKi9PwV6cn3tbu"
+ENV SECRET_KEY "J9pqpvVKHEOGZ7Q03xstsHZ61cwEYWzcZQGXayUQV6ifzL9AkQ"
 RUN python manage.py collectstatic --noinput
 
 EXPOSE 8000
