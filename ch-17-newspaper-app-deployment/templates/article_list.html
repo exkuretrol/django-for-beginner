@@ -1,0 +1,17 @@
+{% extends "_base.html" %}
+{% block content %}
+    {% for article in articles %}
+        <a class="bg-slate-50 p-4 mb-4 block"
+           href="{% url 'article_detail' article.pk %}">
+            <h2 class="text-4xl font-serif mb-4">{{ article.title }}</h2>
+            <div class="text-sm text-slate-300 flex flex-row gap-2">
+                <span class="ml-auto px-2 py-1 bg-slate-500">{{ article.date }}</span>
+                <span class="px-2 py-1 bg-slate-500">Author {{ article.author.username }}</span>
+            </div>
+            <article class="font-mono mb-4">{{ article.body }}</article>
+        </a>
+    {% endfor %}
+{% endblock content %}
+{% block nav %}
+    <a href="{% url 'article_create' %}" class="px-4 py-2 bg-slate-50">Create</a>
+{% endblock nav %}
